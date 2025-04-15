@@ -1,0 +1,307 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Изменен шрифт на более приятный */
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #d3d3d3; /* Серый цвет для боковой панели */
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section-title {
+    margin-top: 0;
+}
+
+.user-items {
+    list-style: none;
+    padding: 0;
+}
+
+.user-item {
+    margin-bottom: 10px;
+}
+
+.user-link {
+    text-decoration: none;
+    color: #2a4d8f;
+}
+
+.user-link:hover {
+    text-decoration: underline;
+}
+
+.chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.chat-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.messages {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    height: 400px; /* фиксированная высота с прокруткой */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.message {
+    padding: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sender {
+    font-weight: bold;
+    color: #2a4d8f; 
+}
+
+.message-time {
+    font-size: 0.8em; 
+    color: #888; 
+    margin-left: 5px; 
+}
+
+.message-text {
+   display:inline-block; 
+   margin-left :5px; 
+}
+
+.btn {
+   padding :6px 12px; 
+   margin :5px; /* Убрали отступы слева и справа */
+   background-color :#2a4d8f; /* Спокойный синий */
+   color:white; 
+   border:none; 
+   border-radius :4px; 
+   cursor:pointer; 
+   width:auto; /* Не на всю ширину */
+}
+
+.btn:hover {
+   background-color :#1c3769; 
+}
+
+.btn-delete { 
+   background-color :#6c757d; /* Спокойный серый */ 
+} 
+
+.btn-delete:hover { 
+   background-color :#5a6268; 
+} 
+
+.form { 
+   display:flex; 
+   flex-direction :column; 
+   gap :5px; 
+   margin-bottom :10px; 
+} 
+
+.input { 
+   padding :8px; 
+   border :1px solid #ccc; 
+   border-radius :4px; 
+} 
+
+.label { 
+   margin-bottom :2px; 
+   font-weight:bold; 
+} 
+
+.logout-form { 
+   margin-top:auto;  
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Стили для сообщений в чате */
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message.sent {
+    background-color: #e1ffc7; /* Цвет для отправленных сообщений */
+}
+
+.message.received {
+    background-color: #d1e7ff; /* Цвет для полученных сообщений */
+}
+
+/* Общие стили для боковой панели */
+.sidebar {
+    width: 250px; /* Ширина боковой панели */
+    padding: 20px;
+    background-color: lightgray;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивные стили для боковой панели */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Полная ширина на мобильных устройствах */
+        box-shadow: none; /* Убираем тень на мобильных устройствах */
+    }
+}
+
+/* Стили для строки поиска */
+.search-input {
+    width: 100%; /* Полная ширина */
+    padding: 8px; /* Отступы */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 14px; /* Размер шрифта */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: gray; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 8px 12px; /* Уменьшенные отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 14px; /* Уменьшенный размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: #0056b3; /* Более темный цвет при наведении */
+}
+
+/* Стили для выпадающего списка (select) */
+select {
+    width: 100%; /* Полная ширина */
+    padding: 8px; /* Отступы */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 14px; /* Размер шрифта */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для неупорядоченного списка */
+ul {
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Стили для элементов списка */
+ul li {
+    padding: 10px; /* Отступы внутри элемента списка */
+    border-bottom: 1px solid #ccc; /* Нижняя граница */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Эффект при наведении на элемент списка */
+ul li:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+/* Адаптивные стили для списков на мобильных устройствах */
+@media (max-width: 768px) {
+    ul li,
+    ol li {
+        font-size: 12px; /* Уменьшенный размер шрифта на мобильных устройствах */
+        padding: 8px; /* Уменьшенные отступы внутри элемента списка */
+    }
+}
+
+/* Стили для индикатора загрузки */
+.loader {
+    border: 8px solid #f3f3f3; /* Светлый фон индикатора загрузки */
+    border-top: 8px solid gray; /* Цвет верхней части индикатора загрузки */
+    border-radius: 50%; /* Круглая форма индикатора загрузки */
+    width: 40px; /* Ширина индикатора загрузки */
+    height: 40px; /* Высота индикатора загрузки */
+    animation: spin 1s linear infinite; /* Анимация вращения */
+
+}
+
+/* Анимация вращения индикатора загрузки*/
+@keyframes spin {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(360deg); }
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.message-input {
+    display: flex;
+}
+
+#message {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#emoji-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Размер эмодзи */
+    cursor: pointer;
+}
+
+.emoji-panel {
+    display: none; /* Скрываем панель по умолчанию */
+    position: absolute;
+    bottom: 50px; /* Расположение над полем ввода */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.emoji {
+    cursor: pointer;
+    font-size: 24px; /* Размер эмодзи */
+    margin-right: 5px; /* Отступ между эмодзи */
+}
